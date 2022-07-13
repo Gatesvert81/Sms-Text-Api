@@ -9,8 +9,8 @@ const twilio = require('twilio');
 const port = process.env.PORT || 4000
 
 //twilio requirements -- Texting API 
-const accountSid = 'AC8c104137655941a6a4e522c192c7c6b0';
-const authToken = 'e1c0d119e42193d7fd1cbb70a4ddc47e'; 
+const accountSid = process.env.ACCOUNTSID ;
+const authToken = process.env.ACCOUNTTOKEN; 
 const client = new twilio(accountSid, authToken);
 
 const app = express(); //alias
